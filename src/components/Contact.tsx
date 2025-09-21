@@ -7,19 +7,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: 'Email',
-      value: 'info@firstank.com',
-      href: 'mailto:info@firstank.com'
+      value: 'kimoel_leotagle@yahoo.com',
+      href: 'mailto:kimoel_leotagle@yahoo.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: 'Phone',
-      value: '+63 (2) 8123-4567',
-      href: 'tel:+6328123456'
+      value: '+63 (043) 233 - 2566',
+      href: 'tel:+63432332566'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: 'Address',
-      value: '123 Industrial Avenue, Makati City, Metro Manila, Philippines',
+      value: 'Purok 1, Brgy. Lodlod, Lipa City, Batangas 4217 Philippines',
       href: '#'
     }
   ];

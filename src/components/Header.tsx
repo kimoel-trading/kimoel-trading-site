@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Menu, X, ShoppingCart } from 'lucide-react';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Products', href: '#products' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "Products", href: "#products" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "About Us", href: "#about" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -20,10 +20,14 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">F</span>
-            </div>
-            <span className="text-2xl font-bold text-brand-blue-dark">FIRSTANK</span>
+            <img
+              src="/Back.png" // put Back.png inside public/
+              alt="Kimoel's Trading Logo"
+              className="w-10 h-10 rounded-lg object-cover"
+            />
+            <span className="text-2xl font-bold text-brand-blue-dark">
+              Kimoel&apos;s Trading Inc.
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -57,7 +61,11 @@ const Header = () => {
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -75,6 +83,7 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
+
               <div className="pt-4 border-t flex flex-col space-y-3">
                 <Button variant="outline" size="sm">
                   Login/Register
