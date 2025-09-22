@@ -1,51 +1,79 @@
 import React from 'react';
 import { Target, Eye, Heart } from 'lucide-react';
 
+// Import your image (replace the file name with your actual image)
+import aboutImage from '@/assets/ABOUT US.png';
+
 const About = () => {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue-dark mb-6">
-            About FIRSTANK
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-            FIRSTANK is a leading provider of water storage solutions in the Philippines, 
-            dedicated to delivering innovative and reliable water management systems. 
-            With over 15 years of experience, we have built a reputation for excellence, 
-            quality, and customer satisfaction.
-          </p>
+    <section id="about" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-6 lg:px-12">
+        {/* Company Intro */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-blue-dark mb-6">
+              About KIMOEL TRADING & <br /> CONSTRUCTION Inc.
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Kimoel Trading and Construction, Inc. (formerly Kimoel Trading and Construction Services) 
+              was founded by Mr. Leo L. Tagle and Mrs. Kim Karen Tagle in June 2017. The company provides 
+              a wide range of services in civil, mechanical, and electrical works, serving industrial, 
+              commercial, and residential projects.
+              <br /><br />
+              As an accredited in-house contractor of PEZA-registered Laguna Technopark Association, Inc. 
+              and Mitsubishi-Hitachi Philippines, Inc., Kimoel has built a strong reputation for delivering 
+              quality solutions and reliable service.
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                <Target className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To provide sustainable and innovative water storage solutions that meet the diverse needs of our clients while contributing to water security in the Philippines.
-              </p>
-            </div>
+          {/* Company image */}
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={aboutImage} // 👈 replace with your image
+              alt="About Kimoel Trading & Construction"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+        </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                <Eye className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To be the most trusted and preferred water storage solutions provider in Southeast Asia, known for quality, innovation, and exceptional service.
-              </p>
+        {/* Mission, Vision, Values */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {/* Vision */}
+          <div className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+              <Eye className="w-10 h-10" />
             </div>
+            <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Vision</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Our vision is to deliver goods and services that exceed the expectations of our clients, suppliers, 
+              management, and manpower who are all part of the growth of this company.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                <Heart className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Values</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Quality, integrity, innovation, and customer satisfaction drive everything we do. We believe in building lasting relationships through excellence.
-              </p>
+          {/* Mission */}
+          <div className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+              <Target className="w-10 h-10" />
             </div>
+            <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Mission</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              To build a long-term and holistic relationship that is the building block of every person’s trust. 
+              Guarantee that our competitive prices are rational to the exceptional services provided through 
+              innovative and advanced technology.
+            </p>
+          </div>
+
+          {/* Core Values */}
+          <div className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300">
+            <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+              <Heart className="w-10 h-10" />
+            </div>
+            <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">Core Values</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Exhibit professionalism, integrity, and honesty in all aspects of the company from management to manpower. 
+              Punctual and committed in all negotiations and business meetings. Assuring that we are not only building with 
+              our hands but also with our hearts.
+            </p>
           </div>
         </div>
       </div>

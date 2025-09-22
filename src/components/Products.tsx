@@ -1,27 +1,34 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import waterTankImage from '@/assets/water-tank-product.jpg';
-import pumpImage from '@/assets/water-pump-product.jpg';
-import filtrationImage from '@/assets/filtration-system-product.jpg';
+import electricalImage from '@/assets/ELECTRICAL.jpg';
+import mechanicalImage from '@/assets/MECHANICAL COMPONENTS.png';
+import pneumaticsImage from '@/assets/PNEUMATICS.png';
+import toolsImage from '@/assets/TOOLS.jpeg';
 
 const Products = () => {
   const products = [
     {
-      title: 'Water Tanks',
-      description: 'Durable and reliable water storage tanks available in various sizes and materials. Perfect for residential, commercial, and industrial applications.',
-      image: waterTankImage,
+      title: 'Electrical',
+      description: 'Electrical supplies and equipment including electrical panels, cable trays, and complete electrical supply solutions. Reliable products for safe and efficient power distribution.',
+      image: electricalImage,
       imageAlt: 'Industrial water storage tank'
     },
     {
-      title: 'Water Pumps',
-      description: 'High-efficiency water pumps for optimal water circulation and pressure management. Designed for long-lasting performance and energy efficiency.',
-      image: pumpImage,
+      title: 'Mechanical Components',
+      description: 'Industrial-grade AC motors, gear motors, bearings, and seals. Built for durability and precision to support a wide range of mechanical applications.',
+      image: mechanicalImage,
       imageAlt: 'Industrial water pump system'
     },
     {
-      title: 'Filtration Systems',
-      description: 'Advanced water filtration and purification systems to ensure clean and safe water for all your needs. Multi-stage filtration technology.',
-      image: filtrationImage,
+      title: 'Automation & Pneumatics',
+      description: 'High-quality pneumatic cylinder accessories and automation parts designed for smooth operation, control, and efficiency in automated systems.',
+      image: pneumaticsImage,
+      imageAlt: 'Water filtration system'
+    },
+    {
+      title: 'Systems & Tooling',
+      description: 'Custom-engineered conveyor systems, jigs, and fixtures. Ideal for manufacturing, assembly, and material handling needs.',
+      image: toolsImage,
       imageAlt: 'Water filtration system'
     }
   ];
@@ -34,11 +41,11 @@ const Products = () => {
             Our Products
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover our comprehensive range of water storage and management solutions
+            Explore our range of electrical, mechanical, automation, and tooling products built for reliability and performance.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <ProductCard
               key={index}

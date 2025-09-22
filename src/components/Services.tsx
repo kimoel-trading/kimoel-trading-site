@@ -1,52 +1,61 @@
 import React from 'react';
-import { Wrench, Users, CheckCircle } from 'lucide-react';
+import ServiceCard from './ServiceCard';
+
+// Import service images
+import engineeringImage from '@/assets/ENGINEERING SERVICES.jpg';
+import machiningImage from '@/assets/MACHINING AND FABRICATION.jpg';
+import civilWorksImage from '@/assets/CIVIL WORKS.jpeg';
 
 const Services = () => {
   const services = [
     {
-      icon: <Wrench className="w-8 h-8" />,
-      title: 'Installation',
-      description: 'Professional installation services by our certified technicians'
+      title: 'Engineering Services',
+      description:
+        'Automation & machine design, electrical works, sheet metal works, and fabrication of electrical control panels tailored to your requirements.',
+      image: engineeringImage,
+      imageAlt: 'Engineering services and design',
+      buttonText: 'Learn More',
     },
     {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Maintenance',
-      description: 'Regular maintenance and repair services to ensure optimal performance'
+      title: 'Machining & Fabrication',
+      description:
+        'Equipped with CNC laser cutting, milling, lathe, bending, and shearing machines to deliver precision machining and fabrication services.',
+      image: machiningImage,
+      imageAlt: 'Machining and fabrication services',
+      buttonText: 'View Services',
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Consultation',
-      description: 'Expert consultation to help you choose the right water storage solutions'
-    }
+      title: 'Civil Works',
+      description:
+        'Comprehensive civil construction works including backhoe rental, road rehabilitation, concreting, structural works, and fire protection systems.',
+      image: civilWorksImage,
+      imageAlt: 'Civil construction and services',
+      buttonText: 'Explore More',
+    },
   ];
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue-dark mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue-dark mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            We provide comprehensive installation, maintenance, and consultation services 
-            to ensure your water storage systems operate at peak efficiency. Our experienced 
-            team is committed to delivering exceptional service quality and customer satisfaction.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            We provide engineering, machining, and civil works services to support industrial and construction needs with precision and reliability.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center mx-auto mb-6 text-white group-hover:shadow-button transition-all duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-semibold text-brand-blue-dark mb-4">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              image={service.image}
+              imageAlt={service.imageAlt}
+              buttonText={service.buttonText}
+            />
           ))}
         </div>
       </div>
